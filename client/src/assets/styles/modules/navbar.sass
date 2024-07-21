@@ -1,0 +1,25 @@
+.navbar
+    .nav-link
+        color: $white
+        &.active
+            color: $white
+            &::after
+                content: ''
+                margin: 0 1.1em 0 1.1em
+                height: 2px
+                background: $white
+                display: block
+                position: relative
+                bottom: -6px
+                left: 0
+                right: 0
+                display: block
+
+    .navbar-brand
+        color: $white
+
+    .nav-link
+        font-weight: bold
+
+    .navbar-toggler
+        color: $white

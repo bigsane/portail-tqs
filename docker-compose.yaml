@@ -1,0 +1,26 @@
+services:
+    app:
+        build:
+            args:
+                NODE_VERSION: $NODE_VERSION
+            context: ./client
+            target: development
+        container_name: ${PROJECT_NAME}-client
+        image: ${PROJECT_NAME}-client
+        restart: unless-stopped
+        volumes:
+            - ./client:/usr/src/app
+        ports:
+            - '3000'
+        expose:
+            - '3000'
+        environment:
+            VIRTUAL_HOST: tqs-client.local.tqs
+            VIRTUAL_PORT: 3000
+        networks:
+            - tqs
+
+networks:
+    tqs:
+        external: true
+        name: tqs
