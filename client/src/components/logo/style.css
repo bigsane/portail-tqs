@@ -1,0 +1,39 @@
+/* Import Google Fonts for custom font families */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&family=Rubik+Wet+Paint&display=swap');
+
+/* Container for the logo, centers the content */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Common styles for the text elements of the logo */
+.logo_tech,
+.logo_quartet,
+.logo_service {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0 2px; /* Adds a small space between the letters */
+}
+
+.logo_tech,
+.logo_quartet {
+    font-family: 'Rubik Moonrocks', sans-serif;
+}
+
+/* Specific styles for the "Tech" part of the logo */
+.logo_tech {
+    color: #e78a00;
+}
+
+/* Specific styles for the "Quartet" part of the logo */
+.logo_quartet {
+    color: #e3e1df;
+}
+
+/* Specific styles for the "Service" part of the logo */
+.logo_service {
+    font-family: 'Rubik Wet Paint', sans-serif; /* Sets the font family */
+    color: #e78a00; /* Sets the text color */
+}
