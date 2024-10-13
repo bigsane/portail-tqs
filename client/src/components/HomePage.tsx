@@ -2,6 +2,7 @@ import Layout from './Layout'
 import ReactFullpage from '@fullpage/react-fullpage'
 import Section from './elements/Section'
 import NAVS from '../constants/nav'
+import { useTranslation } from 'react-i18next'
 
 const HomeSection = ({ title }: HomeSectionProps) => {
     return <h1>{title}</h1>
@@ -31,6 +32,8 @@ const SectionFactory = ({ menuanchor, title }: SectionFactoryProps) => {
 }
 
 const HomePage = () => {
+    const { t } = useTranslation()
+
     return (
         <Layout>
             <ReactFullpage
@@ -45,7 +48,7 @@ const HomePage = () => {
                     <ReactFullpage.Wrapper>
                         {NAVS.map(({ key, menuanchor, title }) => (
                             <Section key={key}>
-                                <SectionFactory key={key} menuanchor={menuanchor} title={title} />
+                                <SectionFactory key={key} menuanchor={menuanchor} title={t(title)} />
                             </Section>
                         ))}
                     </ReactFullpage.Wrapper>
